@@ -8,8 +8,9 @@ class TweetTest < ActiveSupport::TestCase
   end
 
   test "should not save tweet with empty status" do
+    zombie = Zombie.first
     tweet = Tweet.new
-    tweet.zombie = "Hor"
+    tweet.zombie = zombie
     assert !tweet.save, "Saved the tweet without a status"
   end
 
@@ -20,11 +21,21 @@ class TweetTest < ActiveSupport::TestCase
     assert !tweet.save, "Saved the tweet without a name"
   end
 
-  test "show save tweet with status and name" do
+  test "should not save tweet with wrong zombie_id" do
+    zombie = Zombie.new
     tweet = Tweet.new
     tweet.status = "Right message from zombie!"
-    tweet.zombie = "Orc"
+    tweet.zombie = zombie
+    assert !tweet.save, "Tweet with wrong zombie_id saved"
+  end
+
+  test "should save tweet with status and name" do
+    zombie = Zombie.first
+    tweet = Tweet.new
+    tweet.status = "Right message from zombie!"
+    tweet.zombie = zombie
     assert tweet.save, "Right tweet not saved"
   end
+
 
 end
