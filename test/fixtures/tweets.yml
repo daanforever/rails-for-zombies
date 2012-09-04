@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status: Some tweet from first zombie
+  zombie: Axa
+
+two:
+  status: New tweet from second zombie 
+  zombie: Ord
