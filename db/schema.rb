@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120903134417) do
+ActiveRecord::Schema.define(:version => 20120904105320) do
 
   create_table "tweets", :force => true do |t|
     t.text     "status"
-    t.text     "zombie"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "zombie_id"
+  end
+
+  create_table "zombies", :force => true do |t|
+    t.text     "name"
+    t.text     "graveyard"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

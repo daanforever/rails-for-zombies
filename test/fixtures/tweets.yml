@@ -2,8 +2,8 @@
 
 one:
   status: Some tweet from first zombie
-  zombie: Axa
+  zombie_id: 1
 
 two:
-  status: New tweet from second zombie 
-  zombie: Ord
+  status: New tweet from second zombie
+  zombie_id: 2
