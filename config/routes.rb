@@ -1,4 +1,12 @@
 TwitterForZombies::Application.routes.draw do
+  get "tweets/index"
+
+  get "tweets/view"
+
+  get "tweet/index"
+
+  get "tweet/view"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
