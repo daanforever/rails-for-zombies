@@ -1,9 +1,15 @@
 <div class="container">
     <div class="row">
         <div class="span4">
-            <% Tweet.all.each do |tweet| %>
-            <p>From: <%= tweet.zombie.name %></p>
-            <p>Status: <%= tweet.status %></p>
+        	<% tweets = Tweet.all %>
+            <% tweets.each do |tweet| %>
+            <div class="tweet">
+            	<p>From: <%= tweet.zombie.name %></p>
+            	<p>Status: <%= tweet.status %></p>
+        	</div>
+            <% end %>
+            <% if tweets.empty? %>
+            	<em>No tweets found</em>
             <% end %>
         </div>
     </div>

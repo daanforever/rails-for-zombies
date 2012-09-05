@@ -1,4 +1,6 @@
 TwitterForZombies::Application.routes.draw do
+  get "zombies/view"
+
   get "tweets/index"
 
   get "tweets/view"

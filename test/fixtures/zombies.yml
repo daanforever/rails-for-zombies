@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+zone:
   name: Orc
   graveyard: Some first graveyard
 
-two:
+ztwo:
   name: Des
   graveyard: next one graveyard
