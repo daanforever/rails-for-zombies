@@ -1,3 +1,7 @@
 == Twitter for zombies
 
 By http://railsforzombies.org/levels/1
+
+TODO: find best place for twitter's bootstrap images
+TODO: make choose between min.js min.css and normal files from twitters bootstrap
+

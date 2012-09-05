@@ -1,2 +1,10 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<div class="container">
+    <div class="row">
+        <div class="span4">
+            <% tweet = Tweet.first %>
+            <p>From: <%= tweet.zombie.name %></p>
+            <p>Status: <%= tweet.status %></p>
+        </div>
+    </div>
+</div>
+
