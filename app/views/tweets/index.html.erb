@@ -1,9 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="span4">
-            <% tweet = Tweet.first %>
+            <% Tweet.all.each do |tweet| %>
             <p>From: <%= tweet.zombie.name %></p>
             <p>Status: <%= tweet.status %></p>
+            <% end %>
         </div>
     </div>
 </div>
