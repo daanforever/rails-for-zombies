@@ -11,10 +11,15 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="#">Twitter for zombies</a>
+            <!-- <a class="brand" href="#">Twitter for zombies</a> -->
+            <%= link_to "Twitter for zombies", root_path, :class => 'brand' %>
         </div>
     </div>
 </div>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 
 <%= yield %>
 

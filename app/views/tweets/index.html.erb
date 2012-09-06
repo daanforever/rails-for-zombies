@@ -1,8 +1,7 @@
 <div class="container">
     <div class="row"> 
         <div class="span4">
-        <% tweets = Tweet.all %>
-        <% if tweets.empty? %>
+        <% if @tweets.empty? %>
             <em>No tweets found</em>
         <% else %>
             <table class="tweets">
@@ -12,7 +11,7 @@
                     <th></th>
                     <th></th>
                 </tr>
-            <% tweets.each do |tweet| %>
+            <% @tweets.each do |tweet| %>
                 <tr>
                 <td><%= tweet.status %></td>
                 <td><%= link_to tweet.zombie.name, zombies_path(tweet.zombie) %></td>

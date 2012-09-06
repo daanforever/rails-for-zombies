@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="row">
+		<div class="span6 offset 2">
+			<%= form_for @tweet do |f| %>
+			<p><%= f.label :from, 'From:' %><%= f.label :zombie, @tweet.zombie.name %></p>
+			<p><%= f.label :status, 'Status: ' %><%= f.text_area :status %></p>
+			<%= f.submit :class => 'btn btn-primary' %>
+			<% end %>
+		</div>
+	</div>
+</div>

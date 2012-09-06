@@ -2,15 +2,12 @@
 <div class="container">
 	<div class="row">
 		<div class="span8">
-			<% tweets = Zombie.find(params[:id]).tweets %>
-            <% tweets.each do |tweet| %>
-            <div class="tweet">
-            	<p>From: <%= tweet.zombie.name %></p>
-            	<p>Status: <%= tweet.status %></p>
-        	</div>
+			<% zombies = Zombie.all %>
+            <% zombies.each do |zombie| %>
+                <div><%= link_to zombie.name, zombie %></div>
             <% end %>
-            <% if tweets.empty? %>
-            	<em>No tweets found</em>
+            <% if zombies.empty? %>
+            	<em>No zombies found</em>
             <% end %>
 
 		</div>

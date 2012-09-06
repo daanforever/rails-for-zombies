@@ -1,2 +1,11 @@
-<h1>Tweets#edit</h1>
-<p>Find me in app/views/tweets/edit.html.erb</p>
+<div class="container">
+	<div class="row">
+		<div class="span6">
+			<%= form_for @tweet do |f| %>
+			<p><%= f.label :from, 'From:' %><%= f.text_field :zombie_id %></p>
+			<p><%= f.label :status, 'Status: ' %><%= f.text_area :status %></p>
+			<%= f.submit :class => 'btn btn-primary' %>
+			<% end %>
+		</div>
+	</div>
+</div>
