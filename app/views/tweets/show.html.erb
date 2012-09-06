@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row"> 
+        <div class="span4">
+        <% tweets = Tweet.all %>
+        <% if tweets.empty? %>
+            <em>No tweets found</em>
+        <% else %>
+            <table class="tweets">
+                <tr>
+                    <th>Status</th>
+                    <th>Zombie</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            <% tweets.each do |tweet| %>
+                <tr>
+                <td><%= tweet.status %></td>
+                <td><%= link_to tweet.zombie.name, zombies_path(tweet.zombie) %></td>
+                <td><%= link_to 'edit', edit_tweet_path(tweet) %></td>
+                <td><%= link_to 'delete', tweet, :method => :delete %></td>
+        	    </tr>
+            <% end %>
+            </table>
+        <% end %>
+        </div>
+    </div>
+</div>
