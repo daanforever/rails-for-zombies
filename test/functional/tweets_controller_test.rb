@@ -6,8 +6,18 @@ class TweetsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get create" do
-    get :create
+  test "should get show" do
+    get :show, {'id' => 1}
+    assert_response :success
+  end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, {'id' => 1}
     assert_response :success
   end
 

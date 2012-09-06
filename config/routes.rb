@@ -1,9 +1,7 @@
 TwitterForZombies::Application.routes.draw do
 
   resources "tweets"
-
-  get "zombies/view"
-  match "zombies/:id" => "zombies#view", :as => :zombies
+  resources "zombies"
   
   root :to => "tweets#index"
 
