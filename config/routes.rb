@@ -1,13 +1,11 @@
 TwitterForZombies::Application.routes.draw do
+
+  resources "tweets"
+
   get "zombies/view"
-
-  get "tweets/index"
-
-  get "tweets/view"
-
-  get "tweet/index"
-
-  get "tweet/view"
+  match "zombies/:id" => "zombies#view", :as => :zombies
+  
+  root :to => "tweets#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

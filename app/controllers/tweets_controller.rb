@@ -2,6 +2,22 @@ class TweetsController < ApplicationController
   def index
   end
 
-  def view
+  def create
   end
+
+  def new
+  end
+
+  def edit
+  end
+
+  def show
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
 end
